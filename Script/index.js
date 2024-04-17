@@ -115,7 +115,7 @@ async function fetchData() {
 
         // Create and append the image
         const img = document.createElement('img');
-        img.src = item.imageUrl;  // Ensure this matches your actual data structure
+        img.src = item.image;  // Ensure this matches your actual data structure
         img.alt = item.title || 'Product Image';  // Use the title as alt text if available
         itemDiv.appendChild(img);
 
@@ -137,8 +137,32 @@ async function fetchData() {
   } catch (error) {
     console.error('Error fetching data:', error);
   }
+  
 }
 
 // Call the fetchData function to initiate the API request
 fetchData();
+/*
+data.forEach(item => {
+  const itemDiv = document.createElement('div');
+  itemDiv.classList.add('product');
 
+  const img = document.createElement('img');
+  img.src = item.image;  // Using 'item.image' instead of 'item.imageUrl'
+  img.alt = item.title || 'Product Image';  // Using the product title as alt text
+  itemDiv.appendChild(img);
+
+  const title = document.createElement('h3');
+  title.textContent = item.title;
+  itemDiv.appendChild(title);
+
+  if (item.description) {
+      const description = document.createElement('p');
+      description.textContent = item.description;
+      itemDiv.appendChild(description);
+  }
+
+  const container = document.getElementById('image-container');
+  container.appendChild(itemDiv);
+});
+*/
