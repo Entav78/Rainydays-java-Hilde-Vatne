@@ -8,10 +8,11 @@
   --background: rgba(67, 78, 41);
 }
 
+/*
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
+*/
 body {
   display: block;
   margin: 0;
@@ -22,7 +23,7 @@ body {
 }
 
 main {
-  padding-top: 10em;
+  padding-top: 15em;
   flex-grow: 1;
 }
 
@@ -33,7 +34,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   position: fixed;
-  z-index: 999;
+  z-index: 99;
   width: 100%;
 }
 
@@ -152,6 +153,7 @@ nav a:hover {
   color: white;
   text-decoration: none;
   font-size: 1.5vh;
+  bottom: 0;
 }
 
 footer h1 {
@@ -307,4 +309,23 @@ footer h1 {
     width: 90%;
   }
 
+}
+
+html {
+  height: 100%;
+  /* Ensure the html takes the full height of the viewport */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Set the minimum height of the body to be at least the height of the viewport */
+  margin: 0;
+  /* Reset default margin */
+}
+
+main {
+  flex: 1;
+  /* Allows the main content area to grow and take up any extra space, pushing the footer down */
 }

@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  
   <title>Rainydays Home</title>
-
+  
 </head>
 <body>
 
@@ -13,7 +14,7 @@
     <a href="https://norofffeu.github.io/html-css-course-assignment-Entav78/">
       <img class="rd-logo" alt="logo of Rainydays, pushing the comfort zone" src="/images/RD-logo-white.png">
     </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">  
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">                    
     <nav>
       <ul>
         <li><a href="https://norofffeu.github.io/html-css-course-assignment-Entav78/">Home</a></li>
@@ -36,7 +37,24 @@
 
   <main>
 
-    <div id="image-container"></div>
+    <div class="wrapper">
+      <div class="search-container">
+        <input type="search" id="search-input" placeholder="Search products...">
+        <button id="search">Search</button>
+        <button onclick="filterProduct('all')">All</button>
+        <button onclick="filterProduct('women')">Women</button>
+        <button onclick="filterProduct('men')">Men</button>
+      </div>
+    </div>
+    
+    
+    
+      <div class="loader">
+        <div data-glitch="Loading Jackets..." class="glitch">Loading Jackets...</div>
+      </div>
+      
+      <div id="jacketsSection"></div>
+      
 
   </main>
 
@@ -84,7 +102,7 @@
 
 
   <script type="module" src="/script/index.mjs"></script>
-  
+  <script type="module" src="/script/loader.mjs"></script>
   
 </body>
 
