@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "hildeVatne"
+		},
+		{
+			"path": "images"
+		},
+		{
+			"path": "jacket"
+		},
+		{
+			"path": "loader"
+		},
+		{
+			"path": "script"
+		},
+		{
+			"path": ".vscode"
+		},
+		{
+			"path": "assets"
+		},
+		{
+			"path": "checkout"
+		},
+		{
+			"path": "css"
+		}
+	]
+}
