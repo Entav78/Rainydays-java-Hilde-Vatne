@@ -1,4 +1,4 @@
-//import { API_URL } from "./constants.mjs";
+import { API_URL } from "./constants.mjs";
 import { fetchData } from "./fetchData.mjs";
 import { generateSingleJacketItemHTML } from "./generateSingleJacketItemHtml.mjs";
 
@@ -10,6 +10,7 @@ function getIdFromURL() {
 }
 
 const displayContainer = document.querySelector("#display-container");
+
 
 async function main() {
   const jacketId = getIdFromURL();

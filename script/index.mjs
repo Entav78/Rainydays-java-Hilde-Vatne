@@ -10,6 +10,7 @@ async function main() {
   const jackets = await fetchData(API_URL);
   // Generate HTML for all the jackets
   generateJacketsHtml(jackets);
+  
 } 
 /*catch (error) {
   console.error("Failed to process jackets:", error);
