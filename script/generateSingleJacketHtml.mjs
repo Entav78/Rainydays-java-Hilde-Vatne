@@ -20,6 +20,14 @@ export function generateSingleJacketHtml(jacket) {
   const jacketPrice = document.createElement("p");
   jacketPrice.textContent = `${jacket.price}`;
 
+  if (jacket.onSale) {
+    // If the item is on sale, display both prices
+    jacketPrice.innerHTML = `Regular Price: <strike>${jacket.price}</strike> Sale Price: ${jacket.discountedPrice}`;
+  } else {
+    // Otherwise, just display the regular price
+    jacketPrice.textContent = `Price: ${jacket.price}`;
+  }
+
   //Color
   const jacketColor = document.createElement("p");
   jacketColor.textContent = `${jacket.baseColor}`;

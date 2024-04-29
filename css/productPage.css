@@ -1,6 +1,12 @@
 @import url(/css/global.css);
 @import url(/css/loader.css);
 /*@import url(/css/index.css);*/
+
+/*.h1 {
+  margin-top: 20em;
+  padding-top: 30em;
+}*/
+
 /*
 body {
   
@@ -127,4 +133,3 @@ body {
 .display-container {
   margin-top: 30em;
 }
-
