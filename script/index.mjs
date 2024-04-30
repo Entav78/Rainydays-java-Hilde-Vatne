@@ -5,6 +5,7 @@ import { generateJacketsHtml } from "./generateJacketsHtml.mjs";
 
 
 
+
 async function main() {
   // Fetch the data from the API and store it as 'jackets'
   const jackets = await fetchData(API_URL);

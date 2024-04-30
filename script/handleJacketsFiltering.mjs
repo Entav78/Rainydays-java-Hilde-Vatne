@@ -56,15 +56,14 @@ function init() {
 init(); // Call init to initialize the page
 
 */
-
-import { filteredJackets } from './filterJackets.mjs';
+import { API_URL } from './constants.mjs';
+import { filteredJackets } from './filteredJackets.mjs';
 import { generateJacketsHtml } from './generateJacketsHtml.mjs';
 
 function handleJacketsFiltering(jackets, genderFilter) {
-  console.log("handleJacketsFiltering called with filter:", genderFilter);
 
   const filteredData = filteredJackets(jackets, genderFilter); // Get the filtered array
-  console.log("Filtered data length:", filteredData.length); // Log the number of filtered items
+ 
 
   const jacketsContainer = document.querySelector("#jacketsSection");
   jacketsContainer.innerHTML = ""; // Clear existing content

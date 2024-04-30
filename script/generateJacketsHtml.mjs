@@ -50,6 +50,7 @@ export function generateJacketsHtmlGeneration(jackets, genderFilter) {
 
 import { generateSingleJacketHtml } from './generateSingleJacketHtml.mjs';
 
+
 function generateJacketsHtml(jackets) {
   const jacketsContainer = document.querySelector("#jacketsSection");
   jacketsContainer.innerHTML = ""; // Clear existing content
