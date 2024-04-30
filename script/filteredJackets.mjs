@@ -1,16 +1,4 @@
-// filter.mjs
-/*
-import { generateJacketsHtml } from './generateJacketsHtml.mjs';
 
-export function handleJacketsFiltering(jackets, genderFilter) {
-  const filteredJackets = jackets.filter((currentJacket) => {
-    if (genderFilter === 'all') return true;
-    return currentJacket.gender.toLowerCase() === genderFilter;
-  });
-
-  generateJacketsHtml(filteredJackets);
-}
-*/
 
 
 
