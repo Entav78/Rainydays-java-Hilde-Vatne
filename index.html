@@ -38,15 +38,15 @@
   <main>
 
     <div class="wrapper">
-      <div class="search-container">
+    <div class="search-container">
         <input type="search" id="search-input" placeholder="Search products...">
         <button id="search">Search</button>
-        <button onclick="filterProduct('all')">All</button>
-        <button onclick="filterProduct('women')">Women</button>
-        <button onclick="filterProduct('men')">Men</button>
+        <button id="filter-all">All</button>
+        <button id="filter-female">Women</button>
+        <button id="filter-male">Men</button>
       </div>
     </div>
-    
+      
     
     
       <div class="loader">
@@ -58,10 +58,6 @@
 
   </main>
 
-
-  
-  
-  
   <footer> 
     <div class="footer">
       <section class="contact">
@@ -103,7 +99,7 @@
 
   <script type="module" src="/script/index.mjs"></script>
   <script type="module" src="/script/loader.mjs"></script>
-  
+  <script type="module" src="/scripts/handleJacketsFiltering.mjs"></script>
 </body>
 
 
