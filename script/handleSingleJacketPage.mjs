@@ -12,14 +12,14 @@ function getIdFromURL() {
 const displayContainer = document.querySelector("#display-container");
 
 
-async function main() {
+async function fetchAndRenderJackets() {
   const jacketId = getIdFromURL();
   const jacketData = await fetchData(`${API_URL}/${jacketId}`);
   const singleJacketHtml = generateSingleJacketItemHTML(jacketData);
   displayContainer.append(singleJacketHtml);
 }
 
-main();
+fetchAndRenderJackets();
 
 /*
 import { fetchData } from "./fetchData.mjs";

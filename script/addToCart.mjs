@@ -3,7 +3,7 @@
 //    1. If it exists, return it
 //    2. If not, create one and add the item
 // 3. Update local storage
-/*
+
 export function addToCart(jacket) {
   const cart = localStorage.getItem("cart");
   if (cart === null) {
@@ -17,8 +17,8 @@ export function addToCart(jacket) {
   }
 }
 
-const getCartTotalButton = document.querySelector("#cart-total-button");
-getCartTotalButton.addEventListener("click", () => console.log(getCartTotal()));
+
+
 
 export function getCartTotal() {
   let totalCost = 0;
@@ -31,4 +31,3 @@ export function getCartTotal() {
   }
   return totalCost;
 }
-*/

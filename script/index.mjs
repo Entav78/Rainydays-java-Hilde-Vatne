@@ -6,7 +6,7 @@ import { generateJacketsHtml } from "./generateJacketsHtml.mjs";
 
 
 
-async function main() {
+async function fetchAndRenderJackets() {
   // Fetch the data from the API and store it as 'jackets'
   const jackets = await fetchData(API_URL);
   // Generate HTML for all the jackets
@@ -16,4 +16,4 @@ async function main() {
 /*catch (error) {
   console.error("Failed to process jackets:", error);
 }*/
-main();
+fetchAndRenderJackets();

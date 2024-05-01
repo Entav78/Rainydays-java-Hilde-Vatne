@@ -1,7 +1,7 @@
-
+import { addToCartButton } from './addToCartButtonHtml.mjs';
 
 export function generateSingleJacketHtml(jacket) {
-  console.log(jacket);
+  
   const jacketListItem = document.createElement("div");
   jacketListItem.classList.add("jacketProduct");
 
@@ -28,6 +28,8 @@ export function generateSingleJacketHtml(jacket) {
     jacketPrice.textContent = `Price: ${jacket.price}`;
   }
 
+  const addToCartBtn = addToCartButton(jacket);
+
   //Color
   const jacketColor = document.createElement("p");
   jacketColor.textContent = `${jacket.baseColor}`;
@@ -37,12 +39,17 @@ export function generateSingleJacketHtml(jacket) {
   jacketSize.textContent = `${jacket.sizes}`;
 
   // Append image and title
-  jacketLink.appendChild(jacketImage);
+ /* jacketLink.appendChild(jacketImage);
   jacketLink.appendChild(jacketTitle);
   jacketLink.appendChild(jacketPrice);
   jacketLink.appendChild(jacketColor);
   jacketLink.appendChild(jacketSize);
+  jacketLink.appendChild(addToCartBtn);
 
+*/  
+
+  jacketLink.append(jacketImage, jacketTitle, jacketPrice, jacketColor, jacketSize, addToCartBtn);
+  
   jacketListItem.appendChild(jacketLink);
   // Return the HTML we created
   return jacketListItem;

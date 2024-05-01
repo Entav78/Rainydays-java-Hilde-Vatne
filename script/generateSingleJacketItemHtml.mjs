@@ -1,4 +1,5 @@
-//import { addToCart } from "./cart.mjs";
+import { addToCart } from "./addToCart.mjs";
+import { addToCartButton } from "./addToCartButtonHtml.mjs";
 
 export function generateSingleJacketItemHTML(jacket) {
   const jacketContainer = document.createElement("div");
@@ -26,13 +27,14 @@ console.log(jacketImage);
     jacketPrice.textContent = `Price: ${jacket.price}`;
   } 
 
-  const jacketAddToCartButton = document.createElement("button");
+  /*const jacketAddToCartButton = document.createElement("button");
   console.log("appending elements");
   jacketAddToCartButton.addEventListener("click", function () {
     addToCart(jacket);
-  });
-  jacketAddToCartButton.textContent = "Add to cart";
+  });*/
 
-  jacketContainer.append(jacketTitle, jacketImage, jacketPrice, jacketAddToCartButton);
+  const addToCartButton = addToCartButton(jacket);
+
+  jacketContainer.append(jacketTitle, jacketImage, jacketPrice, addToCartButton);
   return jacketContainer;
 }console.log("function end");
