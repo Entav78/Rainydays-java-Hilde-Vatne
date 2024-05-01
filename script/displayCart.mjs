@@ -87,6 +87,8 @@ export async function renderCart() {
   cartTotalElement.textContent = `Total: $${totalCost.toFixed(2)}`; // Display the total cost
 }
 */
+
+import { initializeCartFeatures } from './cartFunctions.mjs';
 import { API_URL } from "./constants.mjs";
 import { fetchData } from './fetchData.mjs';
 
@@ -135,3 +137,13 @@ export async function renderCart() {
 
   cartTotalElement.textContent = `Total: $${totalCost.toFixed(2)}`; // Display the total cost
 }
+
+document.addEventListener("DOMContentLoaded", renderCart);
+/*
+document.addEventListener("DOMContentLoaded", () => {
+  initializeCartFeatures(); // Initialize necessary cart features
+  //renderCart(); // Render cart contents if applicable
+
+  console.log("Cart initialized and rendered"); // Log completion
+});
+*/
