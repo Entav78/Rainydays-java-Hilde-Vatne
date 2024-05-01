@@ -33,8 +33,8 @@ console.log(jacketImage);
     addToCart(jacket);
   });*/
 
-  const addToCartButton = addToCartButton(jacket);
+  const addToCartBtn = addToCartButton(jacket);
 
-  jacketContainer.append(jacketTitle, jacketImage, jacketPrice, addToCartButton);
+  jacketContainer.append(jacketTitle, jacketImage, jacketPrice, addToCartBtn);
   return jacketContainer;
 }console.log("function end");
