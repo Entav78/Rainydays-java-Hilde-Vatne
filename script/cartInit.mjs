@@ -12,7 +12,7 @@ if (getCartTotalButton) {
 }
 */
 
-import { initializeCartFeatures, renderCart } from './cartFunctions.mjs'; // Make sure to adjust the path if needed
+import { initializeCartFeatures } from './cartFunctions.mjs'; // Make sure to adjust the path if needed
 import { renderCart } from './addToCart.mjs';
 document.addEventListener("DOMContentLoaded", () => {
   initializeCartFeatures(); // Initialize cart features
