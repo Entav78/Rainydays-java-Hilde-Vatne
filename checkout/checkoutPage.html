@@ -3,9 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/checkoutPage.css" />
   <title>Chekout Page</title>
 </head>
 <body>
   <h1>This is the checkout page</h1>
+
+  
+
+  <div class="loader">
+    <div data-glitch="Loading Jackets..." class="glitch">Loading Jackets...</div>
+  </div>
+  
+  <div id="cart-container">
+    <!-- Cart items will be rendered here -->
+    <div id="cart-total" class="display-cart-total"></div> <!-- Placeholder for the total amount -->
+  </div>
+
+ <script type="module" src="/script/loaderPage.js"></script>
+ <script type="module" src="/script/checkoutPage.mjs"></script>
 </body>
 </html>

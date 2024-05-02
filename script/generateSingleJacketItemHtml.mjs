@@ -46,6 +46,7 @@ console.log(jacketImage);
 
 //import { addToCart } from "./addToCart.mjs";
 import { addToCartButton } from "./addToCartButtonHtml.mjs";
+import { toShoppingCartButton } from './toShoppingCartButton.mjs';
 
 
 export function generateSingleJacketItemHtml(jacket) {
@@ -58,6 +59,9 @@ export function generateSingleJacketItemHtml(jacket) {
   const jacketTitle = document.createElement("h2");
   jacketTitle.textContent = jacket.title;
 
+  const jacketDescription = document.createElement("p");
+  jacketDescription.textContent = jacket.description;
+
   const jacketPrice = document.createElement("p");
   if (jacket.onSale) {
     jacketPrice.innerHTML = `Regular Price: <strike>${jacket.price}</strike> Sale Price: ${jacket.discountedPrice}`;
@@ -65,9 +69,16 @@ export function generateSingleJacketItemHtml(jacket) {
     jacketPrice.textContent = `Price: ${jacket.price}`;
   }
 
-  const addToCartBtn = addToCartButton(jacket);
+  const jacketColor = document.createElement("p");
+  jacketColor.textContent = jacket.baseColor;
 
-  jacketContainer.append(jacketTitle, jacketImage, jacketPrice, addToCartBtn,);
+  const jacketSize = document.createElement("button");
+  jacketSize.textContent = jacket.sizes;
+
+  const addToCartBtn = addToCartButton(jacket);
+  const toShoppingCartBtn = toShoppingCartButton("button");
+
+  jacketContainer.append( jacketImage, jacketTitle, jacketDescription, jacketColor, jacketSize, jacketPrice, addToCartBtn, toShoppingCartBtn);
 
   return jacketContainer;
 }

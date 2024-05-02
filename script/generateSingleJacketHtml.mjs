@@ -28,17 +28,13 @@ export function generateSingleJacketHtml(jacket) {
     jacketPrice.textContent = `Price: ${jacket.price}`;
   }
 
-  const jacketColor = document.createElement("p");
-  jacketColor.textContent = jacket.baseColor;
-
-  const jacketSize = document.createElement("p");
-  jacketSize.textContent = jacket.sizes;
+  
 
   const addToCartBtn = addToCartButton(jacket);
   const redirectToShoppingCartBtn = toShoppingCartButton("button");
 
   // Append all details to the jacketListItem
-  jacketListItem.append(jacketLink, jacketPrice, jacketColor, jacketSize, addToCartBtn, redirectToShoppingCartBtn);
+  jacketListItem.append(jacketLink, jacketPrice, addToCartBtn, redirectToShoppingCartBtn);
 
   return jacketListItem;
 }

@@ -20,7 +20,7 @@ export async function fetchData(url, toggleLoader) {
 */
 
 // Assuming loader is a class that manages its own display
-import { loader } from "./loader.mjs";
+import { loader } from "./loaderJackets.mjs";
 
 export async function fetchData(url) {
   const loading = new loader();  // Instantiate the loader
