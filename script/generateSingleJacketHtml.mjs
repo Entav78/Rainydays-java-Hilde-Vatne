@@ -59,6 +59,7 @@ export function generateSingleJacketHtml(jacket) {
 */
 
 import { addToCartButton } from './addToCartButtonHtml.mjs';
+import { redirectToCheckout } from './redirectToCheckout.mjs';
 
 export function generateSingleJacketHtml(jacket) {
   const jacketListItem = document.createElement("div");
@@ -92,9 +93,10 @@ export function generateSingleJacketHtml(jacket) {
   jacketSize.textContent = jacket.sizes;
 
   const addToCartBtn = addToCartButton(jacket);
+  const redirectToCheckoutBtn = redirectToCheckout("button");
 
   // Append all details to the jacketListItem
-  jacketListItem.append(jacketLink, jacketPrice, jacketColor, jacketSize, addToCartBtn);
+  jacketListItem.append(jacketLink, jacketPrice, jacketColor, jacketSize, addToCartBtn, redirectToCheckoutBtn);
 
   return jacketListItem;
 }

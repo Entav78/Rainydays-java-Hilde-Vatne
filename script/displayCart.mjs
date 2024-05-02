@@ -91,6 +91,8 @@ export async function renderCart() {
 import { initializeCartFeatures } from './cartFunctions.mjs';
 import { API_URL } from "./constants.mjs";
 import { fetchData } from './fetchData.mjs';
+import { continueShoppingButton } from './continueShoppingButton.mjs';
+import { proceedToCheckoutButton } from './proceedToCheckoutPageButton.mjs';
 
 async function fetchCartData() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -137,6 +139,16 @@ export async function renderCart() {
   
   cartTotalElement.textContent = `Total: $${totalCost.toFixed(2)}`; // Display the total cost
   
+
+
+// Create and add the "Continue Shopping" button
+const continueShoppingBtn = continueShoppingButton();
+cartContainer.appendChild(continueShoppingBtn);
+
+//testing "continue to checkout" button
+const proceedToCheckoutBtn = proceedToCheckoutButton();
+cartContainer.appendChild(proceedToCheckoutBtn);
+
 }
 
 //document.addEventListener("DOMContentLoaded", renderCart);

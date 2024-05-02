@@ -1,7 +1,8 @@
-import { addToCart } from "./addToCart.mjs";
+/*import { addToCart } from "./addToCart.mjs";
 import { addToCartButton } from "./addToCartButtonHtml.mjs";
+import { redirectToCheckout } from "./redirectToCheckout.mjs";
 
-export function generateSingleJacketItemHTML(jacket) {
+export function generateSingleJacketItemHtml(jacket) {
   const jacketContainer = document.createElement("div");
 
   // Create the jacket image
@@ -32,9 +33,41 @@ console.log(jacketImage);
   jacketAddToCartButton.addEventListener("click", function () {
     addToCart(jacket);
   });*/
+/*
+  const addToCartBtn = addToCartButton(jacket);
+
+  const redirectToCheckoutBtn = redirectToCheckout();
+
+  jacketContainer.append(jacketTitle, jacketImage, jacketPrice, addToCartBtn, goToCartBtn, redirectToCheckoutBtn);
+  return jacketContainer;
+}console.log("function end");
+
+*/
+
+//import { addToCart } from "./addToCart.mjs";
+import { addToCartButton } from "./addToCartButtonHtml.mjs";
+
+
+export function generateSingleJacketItemHtml(jacket) {
+  const jacketContainer = document.createElement("div");
+
+  const jacketImage = document.createElement("img");
+  jacketImage.src = jacket.image;
+  jacketImage.alt = `${jacket.title} image`;
+
+  const jacketTitle = document.createElement("h2");
+  jacketTitle.textContent = jacket.title;
+
+  const jacketPrice = document.createElement("p");
+  if (jacket.onSale) {
+    jacketPrice.innerHTML = `Regular Price: <strike>${jacket.price}</strike> Sale Price: ${jacket.discountedPrice}`;
+  } else {
+    jacketPrice.textContent = `Price: ${jacket.price}`;
+  }
 
   const addToCartBtn = addToCartButton(jacket);
 
-  jacketContainer.append(jacketTitle, jacketImage, jacketPrice, addToCartBtn);
+  jacketContainer.append(jacketTitle, jacketImage, jacketPrice, addToCartBtn,);
+
   return jacketContainer;
-}console.log("function end");
+}
