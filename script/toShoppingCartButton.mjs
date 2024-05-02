@@ -20,13 +20,13 @@ document.querySelectorAll('.to-checkout-button').forEach(button => {
 });
 */
 
-export function redirectToCheckout() {
-  const redirectToCheckoutBtn = document.createElement("button");
-  redirectToCheckoutBtn.textContent = "Go to Checkout";
+export function toShoppingCartButton() {
+  const redirectToShoppingCartBtn = document.createElement("button");
+  redirectToShoppingCartBtn.textContent = "Go to Shopping Cart";
 
-  redirectToCheckoutBtn.addEventListener("click", () => {
+  redirectToShoppingCartBtn.addEventListener("click", () => {
     window.location.href = 'http://127.0.0.1:5500/checkout/displayCart.html';
   });
 
-  return redirectToCheckoutBtn;
+  return redirectToShoppingCartBtn;
 }

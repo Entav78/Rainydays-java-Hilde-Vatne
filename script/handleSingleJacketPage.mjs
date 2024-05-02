@@ -1,6 +1,6 @@
 import { API_URL } from "./constants.mjs";
 import { fetchData } from "./fetchData.mjs";
-import { generateSingleJacketItemHTML } from "./generateSingleJacketItemHtml.mjs";
+import { generateSingleJacketItemHtml } from "./generateSingleJacketItemHtml.mjs";
 
 function getIdFromURL() {
   const url = new URL(window.location);
@@ -15,7 +15,7 @@ const displayContainer = document.querySelector("#display-container");
 async function fetchAndRenderJackets() {
   const jacketId = getIdFromURL();
   const jacketData = await fetchData(`${API_URL}/${jacketId}`);
-  const singleJacketHtml = generateSingleJacketItemHTML(jacketData);
+  const singleJacketHtml = generateSingleJacketItemHtml(jacketData);
   displayContainer.append(singleJacketHtml);
 }
 
