@@ -1,3 +1,5 @@
+
+/*
 import { addToCartButton } from './addToCartButtonHtml.mjs';
 
 export function generateSingleJacketHtml(jacket) {
@@ -46,11 +48,53 @@ export function generateSingleJacketHtml(jacket) {
   jacketLink.appendChild(jacketSize);
   jacketLink.appendChild(addToCartBtn);
 
-*/  
-
-  jacketLink.append(jacketImage, jacketTitle, jacketPrice, jacketColor, jacketSize, addToCartBtn);
   
-  jacketListItem.appendChild(jacketLink);
+
+  jacketLink.append(jacketImage, jacketTitle);
+  
+  jacketListItem.appendChild(jacketLink, jacketPrice, jacketColor, jacketSize, addToCartBtn);
   // Return the HTML we created
+  return jacketListItem;
+}
+*/
+
+import { addToCartButton } from './addToCartButtonHtml.mjs';
+
+export function generateSingleJacketHtml(jacket) {
+  const jacketListItem = document.createElement("div");
+  jacketListItem.classList.add("jacketProduct");
+
+  // Create the link
+  const jacketLink = document.createElement("a");
+  jacketLink.href = `/jacket/productPage.html?id=${jacket.id}`;
+
+  const jacketImage = document.createElement("img");
+  jacketImage.src = jacket.image;
+
+  const jacketTitle = document.createElement("h2");
+  jacketTitle.textContent = jacket.title;
+
+  // Append the image and title to the link
+  jacketLink.append(jacketImage, jacketTitle);
+
+  // Create other details separately
+  const jacketPrice = document.createElement("p");
+  if (jacket.onSale) {
+    jacketPrice.innerHTML = `Regular Price: <strike>${jacket.price}</strike> Sale Price: ${jacket.discountedPrice}`;
+  } else {
+    jacketPrice.textContent = `Price: ${jacket.price}`;
+  }
+
+  const jacketColor = document.createElement("p");
+  jacketColor.textContent = jacket.baseColor;
+
+  const jacketSize = document.createElement("p");
+  jacketSize.textContent = jacket.sizes;
+
+  const addToCartBtn = addToCartButton(jacket);
+
+  // Append all details to the jacketListItem
+  jacketListItem.append(jacketLink, jacketPrice, jacketColor, jacketSize, addToCartBtn);
+
   return jacketListItem;
 }

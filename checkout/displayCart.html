@@ -4,15 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/displayCart.css" />
+  <link rel="stylesheet" href="/css/index.css" />
   <title>cart</title>
 </head>
 <body>
+  <div class="loader">
+    <div data-glitch="Loading Jackets..." class="glitch">Loading Jackets...</div>
+  </div>
   <h1>this is inside the shopping cart</h1>
   <div id="cart-container">
     <!-- Cart items will be rendered here -->
     <div id="cart-total" class="display-cart-total"></div> <!-- Placeholder for the total amount -->
   </div>
 
+  <script type="module" src="/script/loader.mjs"></script>
   <script type="module" src="/script/addToCart.mjs"></script>
   <script type="module" src="/script/cartFunctions.mjs"></script>
   <script type="module" src="/script/displayCart.mjs"></script>

@@ -2,10 +2,10 @@
 
 
 export function initializeCartFeatures() {
-  const getCartTotalButton = document.querySelector("#cart-total-button");
+  const cartTotalElement = document.querySelector("#cart-total");
 
-  if (getCartTotalButton) {
-    getCartTotalButton.addEventListener("click", () => console.log(getCartTotal()));
+  if (cartTotalElement) {
+    cartTotalElement.addEventListener("click", () => console.log(getCartTotal()));
   }
 
   // Any other cart-related initialization

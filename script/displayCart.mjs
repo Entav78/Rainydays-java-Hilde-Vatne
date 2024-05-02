@@ -131,19 +131,16 @@ export async function renderCart() {
 
      totalCost += item.price; // Accumulate total cost
 
-     itemDiv.append(itemImage, itemTitle, itemPrice);
+     itemDiv.append(itemImage, itemTitle, itemPrice, cartTotalElement);
      cartContainer.appendChild(itemDiv);
   });
-
+  
   cartTotalElement.textContent = `Total: $${totalCost.toFixed(2)}`; // Display the total cost
+  
 }
 
-document.addEventListener("DOMContentLoaded", renderCart);
-/*
+//document.addEventListener("DOMContentLoaded", renderCart);
 document.addEventListener("DOMContentLoaded", () => {
-  initializeCartFeatures(); // Initialize necessary cart features
-  //renderCart(); // Render cart contents if applicable
-
-  console.log("Cart initialized and rendered"); // Log completion
+  initializeCartFeatures(); // Initialize cart features
+  renderCart(); // Render cart contents
 });
-*/

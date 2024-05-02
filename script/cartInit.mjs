@@ -12,15 +12,20 @@ if (getCartTotalButton) {
 }
 */
 
-//import { initializeCartFeatures } from './cartFunctions.mjs'; // Make sure to adjust the path if needed
-import { renderCart } from './addToCart.mjs';
+import { initializeCartFeatures } from './cartFunctions.mjs'; // Make sure to adjust the path if needed
+import { renderCart } from './displayCart.mjs';
+
+
 document.addEventListener("DOMContentLoaded", () => {
   initializeCartFeatures(); // Initialize cart features
   renderCart(); // Render the cart if applicable
 });
 
+
+/*
 const getCartTotal = document.querySelector("#cart-total");
 
 if (getCartTotal) {
   getCartTotal.addEventListener("click", () => console.log(getCartTotal()));
 }
+*/
