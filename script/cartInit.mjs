@@ -29,3 +29,4 @@ if (getCartTotal) {
   getCartTotal.addEventListener("click", () => console.log(getCartTotal()));
 }
 */
+

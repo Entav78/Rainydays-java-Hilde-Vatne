@@ -6,6 +6,8 @@ import { fetchData } from './fetchData.mjs';
 import { continueShoppingButton } from './continueShoppingButton.mjs';
 import { proceedToCheckoutButton } from './proceedToCheckoutPageButton.mjs';
 import { removeItemFromCartButton } from './removeItemFromCartButton.mjs';
+import { setupCartLink } from "./cartLink.mjs";  // Ensure this function is correctly named and exported in 'cartLink.mjs'
+import { updateCartCount } from './updateCartCount.mjs';
 
 
 async function fetchCartData() {
@@ -75,5 +77,7 @@ cartContainer.appendChild(proceedToCheckoutBtn);
 //document.addEventListener("DOMContentLoaded", renderCart);
 document.addEventListener("DOMContentLoaded", () => {
   initializeCartFeatures(); // Initialize cart features
+  setupCartLink();  // Setup the cart link handling
+  updateCartCount(); // Update the cart count as soon as the page loads
   renderCart(); // Render cart contents
 });

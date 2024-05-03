@@ -11,6 +11,7 @@ export function addToCartButton(jacket) {
   return addToCartBtn;
 }
 
+
 /*
 export function addToCartButton(jacket) {
   const addToCartBtn = document.createElement("button");

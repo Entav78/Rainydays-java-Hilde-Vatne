@@ -27,24 +27,68 @@
       <span></span>
     </label>
   </div>
-    <div id="cart" class="shopping-cart">
-      <a href="http://127.0.0.1:5500/checkout/displayCart.html" id="cartLink">
-        <img class="shopping-cart-logo-small" alt="icon of a shopping-cart" src="/images/shopping-cart-desktop.png">
-      </a>
+  
+  <div id="cart" class="shopping-cart">
+    <a href="http://127.0.0.1:5500/checkout/displayCart.html" id="cartLink">
+      <img class="shopping-cart-logo-small" alt="icon of a shopping-cart" src="/images/shopping-cart-desktop.png">
+      <span id="cart-count" class="cart-count">0</span>
+    </a>
+  </div>
     </div>
   </header>
   
   <div class="loader" aria-live="assertive" aria-busy="true">
     <div data-glitch="Loading jackets..." class="glitch">Loading Jackets...</div>
 </div>
+
   <h1>Your Shopping Cart...</h1>
+
   <div id="cart-container">
     <!-- Cart items will be rendered here -->
     <div id="cart-total" class="display-cart-total"></div> <!-- Placeholder for the total amount -->
   </div>
 
-  <script type="module" src="/script/loaderJackets.mjs"></script>
-  <script type="module" src="/script/addToCart.mjs"></script>
+
+  <footer> 
+    <div class="footer">
+      <section class="contact">
+        <h1> Contact Us</h1>
+        <div class="contact-info">
+        <div class="location">
+          <img class="location-icon" alt="location-icon" src="/Images/Icons/location-icon.png">
+          <div class="location-name">
+            <p>Rainydays</p>
+            <p>Rainy Valley 75</p>
+            <p>3876 Sundale</p>
+          </div>
+        </div> 
+        <div class="call-mail">                                  
+          <div class="call-us">
+            <img class="mobile-icon-large" alt="a-mobile-icom" src="/Images/Icons/mobile-icon.png">
+            <p>+47 976 19 333</p>
+          </div>
+          <div class="mail-us">
+            <img class="mail-icon-large" alt="an-e-mail-icon" src="/Images/Icons/mail-icon.png">
+            <p>mail@rainydays.no</p>
+          </div>
+        </div> 
+        </div>
+      </section>
+       
+      <ul class="terms-policy-footer">
+        <li><a href="https://entav78.github.io/Semester-Project-1-Hilde-Vatne/HTML/privacy-policy"><p>PRIVACY POLICY,</p> <p>TERMS & CONDITIONS</p></a></li>
+      </ul>
+      <ul class="social-media-footer">
+        <li><img class="facebook-icon" alt="facebook icon icon" src="/Images/Icons/facebook-icon.png"></li>
+        <li><img class="instagram-icon" alt="instagram icon" src="/Images/Icons/instagram-icon.png"></li>
+        <li><img class="linkedin-icon" alt="linkedin icon" src="/Images/Icons/linkedin-icon3.png"></li>
+      </ul>
+    </div>
+  
+  </footer>
+
+
+  
   
   <script type="module" src="/script/displayCart.mjs"></script>
   

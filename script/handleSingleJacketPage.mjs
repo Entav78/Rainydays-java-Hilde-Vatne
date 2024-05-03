@@ -1,6 +1,10 @@
+
+
 import { API_URL } from "./constants.mjs";
 import { fetchData } from "./fetchData.mjs";
 import { generateSingleJacketItemHtml } from "./generateSingleJacketItemHtml.mjs";
+import { setupCartLink } from "./cartLink.mjs";  // Ensure this function is correctly named and exported in 'cartLink.mjs'
+import { updateCartCount } from './updateCartCount.mjs';
 
 function getIdFromURL() {
   const url = new URL(window.location);
@@ -9,43 +13,17 @@ function getIdFromURL() {
   return jacketId;
 }
 
-const displayContainer = document.querySelector("#display-container");
+document.addEventListener('DOMContentLoaded', async function() {
+  setupCartLink();  // Setup the cart link handling
+  updateCartCount(); // Update the cart count as soon as the page loads
 
-
-async function fetchAndRenderJackets() {
   const jacketId = getIdFromURL();
-  const jacketData = await fetchData(`${API_URL}/${jacketId}`);
-  const singleJacketHtml = generateSingleJacketItemHtml(jacketData);
-  displayContainer.append(singleJacketHtml);
-}
-
-fetchAndRenderJackets();
-
-/*
-import { fetchData } from "./fetchData.mjs";
-import { generateSingleJacketItemHTML } from "./generateSingleJacketItemHtml.mjs";
-
-function getIdFromURL() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("id");
-}
-
-async function loadJacketDetails() {
-  const jacketId = getIdFromURL();
-  if (!jacketId) {
-    console.error("Jacket ID not found in URL");
-    return;
-  }
-
   try {
-    const jacketData = await fetchData(`API_URL/${jacketId}`);
-    const jacketHTML = generateSingleJacketItemHTML(jacketData);
+    const jacketData = await fetchData(`${API_URL}/${jacketId}`);
+    const singleJacketHtml = generateSingleJacketItemHtml(jacketData);
     const displayContainer = document.querySelector("#display-container");
-    displayContainer.appendChild(jacketHTML);
+    displayContainer.append(singleJacketHtml);
   } catch (error) {
-    console.error("Failed to fetch jacket data:", error);
+    console.error("Failed to load jacket data:", error);
   }
-}
-
-loadJacketDetails();
-*/
+});

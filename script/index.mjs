@@ -120,9 +120,15 @@ import { API_URL } from "./constants.mjs";
 import { fetchData } from "./fetchData.mjs";
 import { generateJacketsHtml } from "./generateJacketsHtml.mjs";
 import { setupCartLink } from "./cartLink.mjs";  // Ensure this function is correctly named and exported in 'cartLink.mjs'
+import { updateCartCount } from './updateCartCount.mjs';
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     setupCartLink();  // Set up the cart link handling
+    updateCartCount();
     
     async function fetchAndRenderJacketsHtml() {
         const loader = document.querySelector('.loader');
@@ -150,5 +156,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     fetchAndRenderJacketsHtml();
+    
 });
+
+
 

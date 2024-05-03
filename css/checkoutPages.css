@@ -1,4 +1,5 @@
 @import url(/css/loader.css);
+@import url(/css/global.css);
 
 .redirectToIndexButton {
   display: inline-block;

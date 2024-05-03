@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/checkoutPages.css" />
-  <title>Chekout Page</title>
+  <title>Checkout Page</title>
 </head>
 <body>
 
@@ -26,9 +26,11 @@
       <span></span>
     </label>
   </div>
+
     <div id="cart" class="shopping-cart">
       <a href="http://127.0.0.1:5500/checkout/displayCart.html" id="cartLink">
         <img class="shopping-cart-logo-small" alt="icon of a shopping-cart" src="/images/shopping-cart-desktop.png">
+        <span id="cart-count" class="cart-count">0</span>
       </a>
     </div>
   </header>
@@ -46,7 +48,7 @@
     <div id="cart-total" class="display-cart-total"></div> <!-- Placeholder for the total amount -->
   </div>
 
- <script type="module" src="/script/loaderPage.js"></script>
- <script type="module" src="/script/checkoutPage.mjs"></script>
+ 
+ <script type="module" src="/script/checkoutPages.mjs"></script>
 </body>
 </html>
