@@ -12,15 +12,4 @@ export function addToCartButton(jacket) {
 }
 
 
-/*
-export function addToCartButton(jacket) {
-  const addToCartBtn = document.createElement("button");
-  addToCartBtn.textContent = "Add to Cart";
-  addToCartBtn.addEventListener("click", (event) => {
-    event.stopPropagation(); // Prevents the link from being clicked
-    addToCart(jacket); // Attach the button to add the specific jacket to the cart
-  });
 
-  return addToCartBtn;
-}
-*/

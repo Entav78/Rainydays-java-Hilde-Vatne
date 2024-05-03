@@ -22,11 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/*
-const getCartTotal = document.querySelector("#cart-total");
 
-if (getCartTotal) {
-  getCartTotal.addEventListener("click", () => console.log(getCartTotal()));
-}
-*/
 
