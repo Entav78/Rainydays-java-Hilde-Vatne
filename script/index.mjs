@@ -77,10 +77,14 @@ async function fetchAndRenderJacketsHtml() {
 
 fetchAndRenderJacketsHtml();
 */
-
+/*
 import { API_URL } from "./constants.mjs";
 import { fetchData } from "./fetchData.mjs";
 import { generateJacketsHtml } from "./generateJacketsHtml.mjs";
+import { cartLink } from "./cartLink.mjs";
+
+document.addEventListener('DOMContentLoaded', function() {
+  setupCartLink();  // Set up the cart link handling
 
 document.addEventListener('DOMContentLoaded', function() {
   async function fetchAndRenderJacketsHtml() {
@@ -110,3 +114,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
   fetchAndRenderJacketsHtml();
 });
+*/
+
+import { API_URL } from "./constants.mjs";
+import { fetchData } from "./fetchData.mjs";
+import { generateJacketsHtml } from "./generateJacketsHtml.mjs";
+import { setupCartLink } from "./cartLink.mjs";  // Ensure this function is correctly named and exported in 'cartLink.mjs'
+
+document.addEventListener('DOMContentLoaded', function() {
+    setupCartLink();  // Set up the cart link handling
+    
+    async function fetchAndRenderJacketsHtml() {
+        const loader = document.querySelector('.loader');
+        if (!loader) {
+            console.error('Loader element not found');
+            return;
+        }
+
+        try {
+            // Show the loader
+            loader.style.display = 'block';
+
+            // Fetch the data from the API and store it as 'jackets'
+            const jackets = await fetchData(API_URL);
+
+            // Generate HTML for all the jackets
+            generateJacketsHtml(jackets);
+
+        } catch (error) {
+            console.error("Failed to process jackets:", error);
+        } finally {
+            // Hide the loader regardless of success or failure
+            loader.style.display = 'none';
+        }
+    }
+
+    fetchAndRenderJacketsHtml();
+});
+

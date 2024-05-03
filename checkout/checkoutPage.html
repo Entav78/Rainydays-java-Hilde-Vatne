@@ -7,13 +7,39 @@
   <title>Chekout Page</title>
 </head>
 <body>
+
+  <header>
+    <a href="http://127.0.0.1:5500/index.html">
+      <img class="rd-logo" alt="logo of Rainydays, pushing the comfort zone" src="/images/RD-logo-white.png">
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">                    
+    <nav>
+      <ul>
+        <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+        <li><a href="https://norofffeu.github.io/html-css-course-assignment-Entav78/shop-w"></a></li>
+        <li><a href="https://norofffeu.github.io/html-css-course-assignment-Entav78/shop-m"></a></li>
+        <li class="hidden"><a href="https://entav78.github.io/Semester-Project-1-Hilde-Vatne/HTML/privacy-policy"><p>PRIVACY POLICY,</p> <p>TERMS & CONDITIONS</p></a></li>
+      </ul>
+    </nav>
+    <div class="hamburger">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+      <span></span>
+    </label>
+  </div>
+    <div id="cart" class="shopping-cart">
+      <a href="http://127.0.0.1:5500/checkout/displayCart.html" id="cartLink">
+        <img class="shopping-cart-logo-small" alt="icon of a shopping-cart" src="/images/shopping-cart-desktop.png">
+      </a>
+    </div>
+  </header>
+
   <h1>This is the checkout page</h1>
 
   
 
-  <div class="loader">
-    <div data-glitch="Loading Jackets..." class="glitch">Loading Jackets...</div>
-  </div>
+  <div class="loader" aria-live="assertive" aria-busy="true">
+    <div data-glitch="Loading jackets..." class="glitch">Loading Jackets...</div>
+</div>
   
   <div id="cart-container">
     <!-- Cart items will be rendered here -->
