@@ -2,6 +2,7 @@
 @import url(../css/loader.css);
 /*@import url(../css/index.css);*/
 
-.display-cart-total {
+.display-cart-total,
+cart-count {
   color: red;
 }

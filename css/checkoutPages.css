@@ -16,3 +16,7 @@
 #cart {
   display: none;
 }
+
+.display-cart-total {
+  color: red;
+}
