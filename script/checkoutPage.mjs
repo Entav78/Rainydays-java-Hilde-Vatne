@@ -43,7 +43,7 @@ export async function renderCart() {
 
      totalCost += item.price; // Accumulate total cost
 
-     itemDiv.append(itemImage, itemTitle, itemPrice, cartTotalElement);
+     itemDiv.append(itemImage, itemTitle, itemPrice);
      cartContainer.appendChild(itemDiv);
   });
   

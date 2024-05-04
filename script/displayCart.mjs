@@ -54,7 +54,7 @@ export async function renderCart() {
      const removeItemsFromCartBtn = removeItemFromCartButton(item);
     
 
-     itemDiv.append(itemImage, itemTitle, itemPrice, cartTotalElement, removeItemsFromCartBtn);
+     itemDiv.append(itemImage, itemTitle, itemPrice, removeItemsFromCartBtn);
      cartContainer.appendChild(itemDiv);
   });
   

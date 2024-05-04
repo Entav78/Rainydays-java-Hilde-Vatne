@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 import { API_URL } from "./constants.mjs";
 import { fetchData } from "./fetchData.mjs";
-import { generateJacketsHtml } from "./generateJacketsHtml.mjs";
+//import { generateJacketsHtml } from "./generateJacketsHtml.mjs";
 import { setupCartLink } from "./cartLink.mjs";  // Ensure this function is correctly named and exported in 'cartLink.mjs'
 import { updateCartCount } from './updateCartCount.mjs';
 import { handleJacketsFiltering } from "./handleJacketsFiltering.mjs";
