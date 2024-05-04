@@ -1,6 +1,6 @@
 
-import { addToCartButton } from "./addToCartButtonHtml.mjs";
-import { toShoppingCartButton } from './toShoppingCartButton.mjs';
+import { addToCartButton } from "./cart/addToCartButtonHtml.mjs";
+import { toShoppingCartButton } from './cart/toShoppingCartButton.mjs';
 
 
 export function generateSingleJacketItemHtml(jacket) {

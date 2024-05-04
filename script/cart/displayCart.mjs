@@ -1,8 +1,14 @@
+
+
 import { initializeCartFeatures } from './cartFunctions.mjs';
-import { API_URL } from "./constants.mjs";
-import { fetchData } from './fetchData.mjs';
+import { API_URL } from "../constants.mjs";
+import { fetchData } from '../fetchData.mjs';
 import { continueShoppingButton } from './continueShoppingButton.mjs';
-import { confirmOrderButton } from './completePurchaseButton.mjs';
+import { proceedToCheckoutButton } from './proceedToCheckoutPageButton.mjs';
+import { removeItemFromCartButton } from './removeItemFromCartButton.mjs';
+import { setupCartLink } from "./cartLink.mjs";  // Ensure this function is correctly named and exported in 'cartLink.mjs'
+import { updateCartCount } from './updateCartCount.mjs';
+
 
 async function fetchCartData() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -43,7 +49,12 @@ export async function renderCart() {
 
      totalCost += item.price; // Accumulate total cost
 
-     itemDiv.append(itemImage, itemTitle, itemPrice);
+     //removeItemFromCartBtn
+
+     const removeItemsFromCartBtn = removeItemFromCartButton(item);
+    
+
+     itemDiv.append(itemImage, itemTitle, itemPrice, removeItemsFromCartBtn);
      cartContainer.appendChild(itemDiv);
   });
   
@@ -56,13 +67,17 @@ const continueShoppingBtn = continueShoppingButton();
 cartContainer.appendChild(continueShoppingBtn);
 
 //testing "continue to checkout" button
-const confirmOrderBtn = confirmOrderButton();
-cartContainer.appendChild(confirmOrderBtn);
+const proceedToCheckoutBtn = proceedToCheckoutButton();
+cartContainer.appendChild(proceedToCheckoutBtn);
+
+
 
 }
 
 //document.addEventListener("DOMContentLoaded", renderCart);
 document.addEventListener("DOMContentLoaded", () => {
   initializeCartFeatures(); // Initialize cart features
+  setupCartLink();  // Setup the cart link handling
+  updateCartCount(); // Update the cart count as soon as the page loads
   renderCart(); // Render cart contents
 });

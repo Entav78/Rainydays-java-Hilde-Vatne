@@ -3,7 +3,7 @@ export function confirmOrderButton() {
   confirmOrderBtn.textContent = "Confirm your Order";
 
   confirmOrderBtn.addEventListener("click", () => {
-    window.location.href = 'http://127.0.0.1:5500/checkout/confirmation/confirmedCheckoutPage.html';
+    window.location.href = 'http://127.0.0.1:5500/html/newCheckout/newConfirmation/index.html';
   });
 
   return confirmOrderBtn;

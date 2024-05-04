@@ -1,7 +1,7 @@
 
 
-import { addToCartButton } from './addToCartButtonHtml.mjs';
-import { toShoppingCartButton } from './toShoppingCartButton.mjs';
+import { addToCartButton } from './cart/addToCartButtonHtml.mjs';
+import { toShoppingCartButton } from './cart/toShoppingCartButton.mjs';
 
 export function generateSingleJacketHtml(jacket) {
   const jacketListItem = document.createElement("div");
@@ -9,7 +9,7 @@ export function generateSingleJacketHtml(jacket) {
 
   // Create the link
   const jacketLink = document.createElement("a");
-  jacketLink.href = `/jacket/productPage.html?id=${jacket.id}`;
+  jacketLink.href = `/html/product/index.html?id=${jacket.id}`; 
 
   const jacketImage = document.createElement("img");
   jacketImage.src = jacket.image;

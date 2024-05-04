@@ -3,8 +3,8 @@
 import { API_URL } from "./constants.mjs";
 import { fetchData } from "./fetchData.mjs";
 import { generateSingleJacketItemHtml } from "./generateSingleJacketItemHtml.mjs";
-import { setupCartLink } from "./cartLink.mjs";  // Ensure this function is correctly named and exported in 'cartLink.mjs'
-import { updateCartCount } from './updateCartCount.mjs';
+import { setupCartLink } from "./cart/cartLink.mjs";  // Ensure this function is correctly named and exported in 'cartLink.mjs'
+import { updateCartCount } from './cart/updateCartCount.mjs';
 
 function getIdFromURL() {
   const url = new URL(window.location);
