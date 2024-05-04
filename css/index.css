@@ -1,5 +1,5 @@
 @import url(../css/global.css);
-@import url(../css/loader.css);
+@import url(/css/loader.css);
 
 body {
   background-color: rgb(203, 206, 197);
