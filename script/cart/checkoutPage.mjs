@@ -48,7 +48,7 @@ export async function renderCart() {
   });
   
   cartTotalElement.textContent = `Total: $${totalCost.toFixed(2)}`; // Display the total cost
-  
+  cartContainer.append(cartTotalElement);
 
 
 // Create and add the "Continue Shopping" button
