@@ -9,7 +9,7 @@ export function toShoppingCartButton() {
     if (cart.length === 0) {
       alert("Your cart is currently empty. Please add some items before heading to the cart.");
     } else {
-      window.location.href = 'http://127.0.0.1:5500/html/cart/index.html';
+      window.location.href = 'https://entav78.github.io/Rainydays-java-Hilde-Vatne/html/cart/index';
     }
   });
 

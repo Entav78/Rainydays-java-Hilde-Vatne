@@ -3,7 +3,7 @@ export function proceedToCheckoutButton() {
   proceedToCheckoutBtn.textContent = "To Checkout";
 
   proceedToCheckoutBtn.addEventListener("click", () => {
-    window.location.href = 'http://127.0.0.1:5500/html/newCheckout/index.html';
+    window.location.href = 'https://entav78.github.io/Rainydays-java-Hilde-Vatne/html/newCheckout/index';
   });
 
   return proceedToCheckoutBtn;
