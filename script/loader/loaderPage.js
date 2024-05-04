@@ -1,7 +1,7 @@
 export class loaderPage {
   constructor(html, css) {
-      this.html = html;  // Set HTML content
-      this.css = css;    // Set CSS styles
+      this.html = html;
+      this.css = css;
   }
 
   inject() {
@@ -14,7 +14,6 @@ export class loaderPage {
       document.body.appendChild(div);
   }
 
-  // Optionally, add a method to remove the loader from the DOM
   remove() {
       const loaderElement = document.querySelector('.loaderPage');
       if (loaderElement) {

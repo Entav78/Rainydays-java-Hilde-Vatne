@@ -3,7 +3,7 @@
 import { API_URL } from "./constants.mjs";
 import { fetchData } from "./fetchData.mjs";
 import { generateSingleJacketItemHtml } from "./generateSingleJacketItemHtml.mjs";
-import { setupCartLink } from "./cart/cartLink.mjs";  // Ensure this function is correctly named and exported in 'cartLink.mjs'
+import { setupCartLink } from "./cart/cartLink.mjs";
 import { updateCartCount } from './cart/updateCartCount.mjs';
 
 function getIdFromURL() {
@@ -14,8 +14,8 @@ function getIdFromURL() {
 }
 
 document.addEventListener('DOMContentLoaded', async function() {
-  setupCartLink();  // Setup the cart link handling
-  updateCartCount(); // Update the cart count as soon as the page loads
+  setupCartLink();
+  updateCartCount();
 
   const jacketId = getIdFromURL();
   try {

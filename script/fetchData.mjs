@@ -1,11 +1,9 @@
 
-
-// Assuming loader is a class that manages its own display
 import { loader } from "./loader/loaderJackets.mjs";
 
 export async function fetchData(url) {
-  const loading = new loader();  // Instantiate the loader
-  loading.inject();  // Show the loader
+  const loading = new loader();
+  loading.inject();
 
   try {
     const response = await fetch(url);
@@ -18,7 +16,7 @@ export async function fetchData(url) {
     console.error("Error fetching data:", error);
     throw error;
   } finally {
-    loading.remove();  // Hide the loader after fetching or if an error occurred
+    loading.remove();
   }
 }
 

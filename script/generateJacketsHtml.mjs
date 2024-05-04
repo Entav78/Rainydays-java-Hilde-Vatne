@@ -1,11 +1,9 @@
 
-
 import { generateSingleJacketHtml } from './generateSingleJacketHtml.mjs';
-
 
 function generateJacketsHtml(jackets) {
   const jacketsContainer = document.querySelector("#jacketsSection");
-  jacketsContainer.innerHTML = ""; // Clear existing content
+  jacketsContainer.innerHTML = "";
 
   jackets.forEach(jacket => {
     const jacketHtml = generateSingleJacketHtml(jacket);

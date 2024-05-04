@@ -232,9 +232,7 @@ footer h1 {
   .shopping-cart {
     position: relative;
     height: 48px;
-    /* Adjust size as needed */
     width: 48px;
-    /* Adjust size as needed */
     justify-content: center;
     align-items: center;
     display: flex;
@@ -242,16 +240,12 @@ footer h1 {
 
   .nav-toggle-label, .shopping-cart {
     margin-right: 1em;
-    /* Add margin for spacing */
   }
 
   nav {
     all: unset;
     display: block;
     grid-column: 3 / 4;
-
-    /* justify-content: center;
-    align-items: center;*/
     flex: 0 1 auto;
   }
 
@@ -313,19 +307,15 @@ footer h1 {
 
 html {
   height: 100%;
-  /* Ensure the html takes the full height of the viewport */
 }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Set the minimum height of the body to be at least the height of the viewport */
   margin: 0;
-  /* Reset default margin */
 }
 
 main {
   flex: 1;
-  /* Allows the main content area to grow and take up any extra space, pushing the footer down */
 }

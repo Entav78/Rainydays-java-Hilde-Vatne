@@ -1,7 +1,4 @@
 
-
-
-
 export function filteredJackets(jackets, genderFilter) {
   return jackets.filter((currentJacket) => {
     if (genderFilter === 'all') return true;

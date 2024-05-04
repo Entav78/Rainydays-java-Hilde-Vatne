@@ -6,8 +6,6 @@ import { toShoppingCartButton } from './cart/toShoppingCartButton.mjs';
 export function generateSingleJacketHtml(jacket) {
   const jacketListItem = document.createElement("div");
   jacketListItem.classList.add("jacketProduct");
-
-  // Create the link
   const jacketLink = document.createElement("a");
   jacketLink.href = `https://entav78.github.io/Rainydays-java-Hilde-Vatne/html/product/index?id=${jacket.id}`; 
 
@@ -17,10 +15,8 @@ export function generateSingleJacketHtml(jacket) {
   const jacketTitle = document.createElement("h2");
   jacketTitle.textContent = jacket.title;
 
-  // Append the image and title to the link
   jacketLink.append(jacketImage, jacketTitle);
 
-  // Create other details separately
   const jacketPrice = document.createElement("p");
   if (jacket.onSale) {
     jacketPrice.innerHTML = `Regular Price: <strike>${jacket.price}</strike> Sale Price: ${jacket.discountedPrice}`;
@@ -28,12 +24,9 @@ export function generateSingleJacketHtml(jacket) {
     jacketPrice.textContent = `Price: ${jacket.price}`;
   }
 
-  
-
   const addToCartBtn = addToCartButton(jacket);
   const redirectToShoppingCartBtn = toShoppingCartButton("button");
 
-  // Append all details to the jacketListItem
   jacketListItem.append(jacketLink, jacketPrice, addToCartBtn, redirectToShoppingCartBtn);
 
   return jacketListItem;
