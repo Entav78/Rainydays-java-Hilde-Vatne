@@ -6,7 +6,7 @@ import { fetchData } from '../fetchData.mjs';
 import { continueShoppingButton } from './continueShoppingButton.mjs';
 import { proceedToCheckoutButton } from './proceedToCheckoutPageButton.mjs';
 import { removeItemFromCartButton } from './removeItemFromCartButton.mjs';
-import { setupCartLink } from "./cartLink.mjs";  // Ensure this function is correctly named and exported in 'cartLink.mjs'
+import { setupCartLink } from "./cartLink.mjs";  
 import { updateCartCount } from './updateCartCount.mjs';
 
 

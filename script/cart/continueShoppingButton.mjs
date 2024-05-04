@@ -3,7 +3,7 @@ export function continueShoppingButton() {
   continueShoppingBtn.textContent = "Continue Shopping";
 
   continueShoppingBtn.addEventListener("click", () => {
-    window.location.href = 'http://127.0.0.1:5500/index.html';
+    window.location.href = 'https://entav78.github.io/Rainydays-java-Hilde-Vatne/';
   });
 
   return continueShoppingBtn;
