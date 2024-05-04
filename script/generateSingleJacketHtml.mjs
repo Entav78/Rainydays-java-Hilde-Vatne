@@ -9,7 +9,7 @@ export function generateSingleJacketHtml(jacket) {
 
   // Create the link
   const jacketLink = document.createElement("a");
-  jacketLink.href = `/html/product/index.html?id=${jacket.id}`; 
+  jacketLink.href = `https://entav78.github.io/Rainydays-java-Hilde-Vatne/html/product/index?id=${jacket.id}`; 
 
   const jacketImage = document.createElement("img");
   jacketImage.src = jacket.image;
