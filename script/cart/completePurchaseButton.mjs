@@ -3,7 +3,7 @@ export function confirmOrderButton() {
   confirmOrderBtn.textContent = "Confirm your Order";
 
   confirmOrderBtn.addEventListener("click", () => {
-    window.location.href = 'https://entav78.github.io/Rainydays-java-Hilde-Vatne/html/newCheckout/newConfermation/index';
+    window.location.href = 'https://entav78.github.io/Rainydays-java-Hilde-Vatne/html/newCheckout/newConfirmation/index';
   });
 
   return confirmOrderBtn;
