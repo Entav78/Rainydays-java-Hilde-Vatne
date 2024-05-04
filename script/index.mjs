@@ -121,7 +121,7 @@ import { fetchData } from "./fetchData.mjs";
 import { generateJacketsHtml } from "./generateJacketsHtml.mjs";
 import { setupCartLink } from "./cartLink.mjs";  // Ensure this function is correctly named and exported in 'cartLink.mjs'
 import { updateCartCount } from './updateCartCount.mjs';
-
+import { handleJacketsFiltering } from "./handleJacketsFiltering.mjs";
 
 
 
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const jackets = await fetchData(API_URL);
 
             // Generate HTML for all the jackets
-            generateJacketsHtml(jackets);
+            handleJacketsFiltering(jackets);
 
         } catch (error) {
             console.error("Failed to process jackets:", error);
