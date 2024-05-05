@@ -32,7 +32,7 @@ export async function renderCart() {
 
      const itemImage = document.createElement("img");
      itemImage.src = item.image;
-     itemImage.alt = item.title;y
+     itemImage.alt = item.title;
 
      const itemTitle = document.createElement("p");
      itemTitle.textContent = item.title;
